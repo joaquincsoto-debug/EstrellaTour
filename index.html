@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estrella Tour - Reserva de Asientos</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Estrella Tour</h1>
+    <p>Reserva tu asiento para Mercedes ↔ Buenos Aires</p>
+  </header>
+
+<main>
+  <label for="horario">Selecciona un horario:</label>
+  <select id="horario">
+    <option value="">-- Elige un horario --</option>
+    <option value="08:00">08:00</option>
+    <option value="10:00">10:00</option>
+    <option value="14:00">14:00</option>
+    <option value="18:00">18:00</option>
+  </select>
+
+  <div style="margin-top:10px;">
+    <input id="nombre" type="text" placeholder="Nombre y Apellido" style="padding:10px; width:260px;"/>
+    <input id="dni" type="text" placeholder="DNI" style="padding:10px; width:120px; margin-left:6px;"/>
+  </div>
+
+  <div id="asientos-container">
+    <h2>Selecciona tu asiento:</h2>
+    <div id="asientos"></div>
+  </div>
+
+  <button id="reservar-btn" disabled>Reservar</button>
+
+  <section id="panel-reservas">
+    <h3>Reservas del horario</h3>
+    <div id="lista-reservas">Elegí un horario para ver reservas…</div>
+    
+  </section>
+    <section id="backup-tools" style="max-width:720px;margin:12px auto 0;display:flex;gap:8px;justify-content:flex-start;">
+    <button id="btn-exportar">Exportar reservas (.json)</button>
+    <label class="btn-file" style="display:inline-block;">
+        <input id="file-import" type="file" accept="application/json" style="display:none;">
+        <span style="border:0;border-radius:6px;padding:8px 12px;background:#e8f0fe;cursor:pointer;display:inline-block;">Importar reservas (.json)</span>
+  </label>
+    </section>
+
+</main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
